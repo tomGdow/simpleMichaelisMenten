@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
-        "HTMLFiles/xhtml-math11-f.dtd">
+"HTMLFiles/xhtml-math11-f.dtd">
 
 <!-- Created with the Wolfram Language : www.wolfram.com -->
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
- <title>
-  Untitledf
- </title>
- <link href="HTMLFiles/reversible_mm_forSO_htmlVersion.css" rel="stylesheet" type="text/css" />
- <script src="//static.firebase.com/v0/firebase.js"></script>
+<title>
+    Michaelis-Menten (Reversible) 
+</title>
+<link href="HTMLFiles/reversible_mm_forSO_htmlVersion.css" rel="stylesheet" type="text/css" />
+<script src="//static.firebase.com/v0/firebase.js"></script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">  
+MathJax.Hub.Config({
+HTML: ["input/TeX","output/HTML-CSS"],
+TeX: { extensions: ["AMSmath.js","AMSsymbols.js"], 
+equationNumbers: { autoNumber: "AMS" } },
+extensions: ["tex2jax.js"],
+jax: ["input/TeX","output/HTML-CSS"],
+tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+processEscapes: true },
+"HTML-CSS": { availableFonts: ["TeX"],
+linebreaks: { automatic: true } }
+});
+</script>
+
 </head>
 
 <body>
 
 <p class='Title' style='text-align: center;'>
- Derivation of the Rate Law for the the Reversible Michaelis-Menten Mechanism 
+Derivation of the Rate Law for the the Reversible Michaelis-Menten Mechanism 
 </p>
 
 
@@ -27,125 +42,130 @@
 
 <p class='Subsection' style='text-align: center;'>Created with Wolfram&nbsp;<a href="https://www.wolfram.com/mathematica/">Mathematica</a><p>
 <p class="Subsection">
- 1. Preliminaries
+1. Preliminaries
 </p>
 
 
-
 <p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_1.png" alt="reversible_mm_forSO_htmlVersion_1.png" width="305" height="17" style="vertical-align:middle" />
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_1.png" alt="reversible_mm_forSO_htmlVersion_1.png" width="305" height="17" style="vertical-align:middle" />
 </p>
 
 <p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_2.png" alt="reversible_mm_forSO_htmlVersion_2.png" width="427" height="17" style="vertical-align:middle" />
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_2.png" alt="reversible_mm_forSO_htmlVersion_2.png" width="427" height="17" style="vertical-align:middle" />
 </p>
 
 <p class="Subsection">
- 2. Mechanisms 
+2. Mechanism 
 </p>
 
 
 
 <p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_3.gif" alt="reversible_mm_forSO_htmlVersion_3.gif" width="500" height="75" style="vertical-align:middle" />
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_3.gif" alt="reversible_mm_forSO_htmlVersion_3.gif" width="500" height="75" style="vertical-align:middle" />
 </p>
 
 <p class="Subsection">
- 3. Derivation of the rate-constant form of the Rate Law
+3. Derivation of the rate-constant form of the Rate Law
 </p>
 
 
 
 <p class="Item">
-Differential equation (making the steady-state assumption, and where e<sub>o</sub> is the total enzyme
-concentration). 
+Set up the differential equation 
+</p>
+<p>
+<p class="Subitem"> Let $x$ be the conentration of ES</p>
+<p class="Subitem">Let $e_o$ be the total enzyme concentration</p>
+<p class="Subitem">Therefore, the concentration of E (the 'free' enzyme concentration) equals $e_o$ - $x$ </p>
+<p> 
+<p class="Subitem">From the steady-state assumption, the rate of formation of x will equal the rate of breakdown of $x$, 
+and the following differential equation may be written </p>
+<p>
+$$ {dx\over dt} =  {k_{1,2}\ (e_o -x)\ s + k_{3,2}\ (e_o -x)\ p - (k_{2,1} + k_{2,3})\ x = 0}\ \ \ \ \ \ \ (2)$$
 </p>
 
-
-
+<p class="Item">Solving for $x$</p>
 <p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_4.png" alt="reversible_mm_forSO_htmlVersion_4.png" width="699" height="17" style="vertical-align:middle" />
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_4.png" alt="reversible_mm_forSO_htmlVersion_4.png" width="699" height="17" style="vertical-align:middle" />
 </p>
 
 <p class="Output">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_5.png" alt="reversible_mm_forSO_htmlVersion_5.png" width="270" height="40" style="vertical-align:middle" />
-</p>
-
-<p class="Item">
- Velocity equation
-</p>
-
-
-
-<p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_6.png" alt="reversible_mm_forSO_htmlVersion_6.png" width="291" height="17" style="vertical-align:middle" />
-</p>
-
-<p class="Output">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_7.png" alt="reversible_mm_forSO_htmlVersion_7.png" width="172" height="17" style="vertical-align:middle" />
-</p>
-
-<p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_8.png" alt="reversible_mm_forSO_htmlVersion_8.png" width="411" height="17" style="vertical-align:middle" />
-</p>
-
-<p class="Output">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_9.png" alt="reversible_mm_forSO_htmlVersion_9.png" width="219" height="40" style="vertical-align:middle" />
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_5.png" alt="reversible_mm_forSO_htmlVersion_5.png" width="270" height="40" style="vertical-align:middle" />
 </p>
 
 <p class="Subsection">
- 4. Define Kinetic Constants 
-</p>
-
-
-
-<p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_10.png" alt="reversible_mm_forSO_htmlVersion_10.png" width="151" height="46" style="vertical-align:middle" />
+4. Velocity equation
 </p>
 
 <p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_11.png" alt="reversible_mm_forSO_htmlVersion_11.png" width="152" height="46" style="vertical-align:middle" />
-</p>
-
-<p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_12.png" alt="reversible_mm_forSO_htmlVersion_12.png" width="114" height="17" style="vertical-align:middle" />
-</p>
-
-<p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_13.png" alt="reversible_mm_forSO_htmlVersion_13.png" width="115" height="17" style="vertical-align:middle" />
-</p>
-
-<p class="Subsection">
- 5. The Kinetic-Constant form of the Rate&nbsp;&nbsp;Law
-</p>
-
-
-
-<p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_14.png" alt="reversible_mm_forSO_htmlVersion_14.png" width="302" height="67" style="vertical-align:middle" />
-</p>
-
-<p class="Subsection">
- 6. An Important Check 
-</p>
-
-
-
-<p class="Input">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_15.png" alt="reversible_mm_forSO_htmlVersion_15.png" width="391" height="17" style="vertical-align:middle" />
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_6.png" alt="reversible_mm_forSO_htmlVersion_6.png" width="291" height="17" style="vertical-align:middle" />
 </p>
 
 <p class="Output">
- <img src="HTMLFiles/reversible_mm_forSO_htmlVersion_16.png" alt="reversible_mm_forSO_htmlVersion_16.png" width="38" height="17" style="vertical-align:middle" />
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_7.png" alt="reversible_mm_forSO_htmlVersion_7.png" width="172" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_8.png" alt="reversible_mm_forSO_htmlVersion_8.png" width="411" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_9.png" alt="reversible_mm_forSO_htmlVersion_9.png" width="219" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+5. Define Kinetic Constants 
+</p>
+
+
+
+<p class="Input">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_10.png" alt="reversible_mm_forSO_htmlVersion_10.png" width="151" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_11.png" alt="reversible_mm_forSO_htmlVersion_11.png" width="152" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_12.png" alt="reversible_mm_forSO_htmlVersion_12.png" width="114" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_13.png" alt="reversible_mm_forSO_htmlVersion_13.png" width="115" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+6. The Kinetic-Constant form of the Rate&nbsp;&nbsp;Law
+</p>
+
+
+
+<p class="Input">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_14.png" alt="reversible_mm_forSO_htmlVersion_14.png" width="302" height="67" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+7. An Important Check 
+</p>
+
+
+
+<p class="Input">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_15.png" alt="reversible_mm_forSO_htmlVersion_15.png" width="391" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+<img src="HTMLFiles/reversible_mm_forSO_htmlVersion_16.png" alt="reversible_mm_forSO_htmlVersion_16.png" width="38" height="17" style="vertical-align:middle" />
 </p>
 
 
 
 
 <div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
- <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
-  <span style="color:#555555">Created with the Wolfram Language</span> 
- </a>
+    <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+        <span style="color:#555555">Created with the Wolfram Language</span> 
+    </a>
 </div>
 </body>
 
